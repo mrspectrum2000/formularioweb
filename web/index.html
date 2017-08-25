@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function soloEnteros(e) {
+                var keynum;
+                if (window.event)
+                    keynum = e.keyCode;
+                else
+                if (e.wich)
+                    keynum = e.wich;
+                if ((keynum >= 48 && keynum <= 57) || keynum === 8)
+                    return true;
+                else
+                    return false;
+
+            }
+            
+        </script>
+    </head>
+    <body>
+        <form action="base.jsp" method="post" >
+            Nombre.<input type="text" name="nombre" onkeypress="return soloEnteros(event);"><br>
+            Apellido Paterno<input type="text" name="apellido_pat"><br>
+            Apellido Materno<input type="text" name="apellido_mat"><br>
+            Escuela<input type="text" name="escuela"><br>
+            <input type="submit" value="subir" name="subir">
+        </form>
+    </body>
+</html>
